@@ -69,4 +69,30 @@ class Websocket(C2Profile):
             verifier_regex="^[0-9]+$",
             required=False,
         ),
+        C2ProfileParameter(
+            name="proxy_host",
+            description="Proxy Host",
+            default_value="",
+            required=False,
+            verifier_regex="^$|^(http|https):\/\/[a-zA-Z0-9]+",
+        ),
+        C2ProfileParameter(
+            name="proxy_port",
+            description="Proxy Port",
+            default_value="",
+            verifier_regex="^$|^[0-9]+$",
+            required=False,
+        ),
+        C2ProfileParameter(
+            name="proxy_user",
+            description="Proxy Username",
+            default_value="",
+            required=False,
+        ),
+        C2ProfileParameter(
+            name="proxy_pass",
+            description="Proxy Password",
+            default_value="",
+            required=False,
+        ),
     ]
